@@ -1,4 +1,13 @@
-div[data-ajax-warning="true"] {
+div[data-ajax-warning="true"] 
+{
 	display:none !important;
 	
+}
+
+div#loading.jqm-demos div.ui-panel-content-wrap {
+	background:url(images/screen-hdpi-landscape.png) scroll center center repeat;
+}
+
+div.ui-footer a.ui-btn span.ui-btn-inner {
+	width:auto !important;
 }

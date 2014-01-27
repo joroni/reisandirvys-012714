@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="http://demos.jquerymobile.com/1.3.2/_assets/css/jqm-demos.css">
 <link rel="stylesheet" href="style-rni.css">
  <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
-
-
     <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
 <script src="http://demos.jquerymobile.com/1.3.2/js/jquery.js"></script>
@@ -50,9 +48,9 @@
 			margin-top: 1.4em;
 			border-top: 1px solid rgba(0,0,0,.1);
 		}
-		.ui-footer {
+		/*.ui-footer {
 			display:none;
-		}
+		}*/
 		div[data-ajax-warning="true"] {
 			display:none !important;
 		}
@@ -75,7 +73,7 @@
        body {
         background: #fff;
         color: #444;
-       font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+       font: 16px/1.5 "Open Sans", Helvetica, Arial, sans-serif;
       }
 
       a, 
@@ -104,8 +102,8 @@
 
       .glyph {
         border-bottom: 1px dotted #ccc;
-        padding: 10px 0 20px;
-        margin-bottom: 20px;
+      /*  padding: 10px 0 20px;
+        margin-bottom: 20px;*/
       }
 
       .preview-glyphs { vertical-align: bottom; } 
@@ -172,7 +170,7 @@
 		<!--<h1>Home</h1>-->
           <div class="glyph">
             <div class="preview-glyphs">
-		<a href="#nav-panel"><i class="step fi-align-justify size-72"></i></a>
+				<a href="#nav-panel"><i class="step fi-align-justify size-36" ></i></a>
 		<!--<a href="#login" data-icon="gear" data-iconpos="notext">Add</a>-->
         	</div>
         </div>
@@ -196,9 +194,16 @@
 	</div>
 	<!-- /content -->
 	<div data-role="footer" data-position="fixed" data-theme="f">
-		<a href="http:www.reisandirvys.com" target="_blank">www.reisandirvys.com</a>
+  <!--  <a data-inline="true" data-iconpos="bottom" data-icon="arrow-d" data-role="button" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-bottom ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">Bottom</span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span></span>-->
+    
+  		<a href="#"><i class="step fi-share size-72" ></i></a>
+   		<a href="#"><i class="step fi-comment-quotes size-72" ></i></a>
+    	<a href="#"><i class="step fi-archive size-72" ></i></a>
+     	<a href="#"><i class="step fi-burst-new size-72" ></i></a>
+  		
+		<!--<a href="http:www.reisandirvys.com" target="_blank">www.reisandirvys.com</a>
 		<a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
-		<a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>
+		<a id="footout" href="#login" data-role="button" data-icon="delete">Account</a>-->
 	</div>
 	<!-- /footer -->
 	<!-- panel left -->
