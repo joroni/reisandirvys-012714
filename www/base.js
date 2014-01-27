@@ -44,6 +44,7 @@ if (baseurl) {
 	} else {
 
 		$("#footout").hide();
+		$.mobile.changePage("#login");// CUSTOM
 	};
 
 	$.mobile.changePage("#loading");
@@ -70,7 +71,17 @@ function saveSettings() {
 */
 function loginout() {
 	if (localStorage.localLogin != 3) {
-		//$.mobile.changePage("#login");
+		
+		$.mobile.changePage("#login");
+	} else {
+		logout();
+	}
+}
+
+function checkuser() {
+	if (localStorage.localLogin != 3) {
+		$("#username").val("");
+		$("#password").val("");;
 		$.mobile.changePage("#login");
 	} else {
 		logout();
@@ -107,7 +118,7 @@ function saveLogin() {
 		if (data.status == "ok") {
 			localStorage.localLogin = 3;
 			localStorage.hash = data.hash;
-			$.mobile.changePage("#home");
+			$.mobile.changePage("#loading");
 		};
 	};
 	var saybi = function(data) {
@@ -118,7 +129,6 @@ function saveLogin() {
 		if (password) {
 			localStorage.phonegapPass = password;
 			$("#logmsg").html("Settings for " + username + " trying to contact server ...");
-			$("#loggedin").html("Hi " + username + "!");
 			purl = baseurl + '/phonegap/login';
 			$.ajax({
 				type : 'POST',
@@ -192,7 +202,8 @@ function clearData() {
 	$("#username").val("");
 	$("#password").val("");
 	$("#logoutlia").val("Login");
-	clearStoryData();
+	clearStoryData();	
+	$.mobile.changePage("#login");
 }
 
 function addStory() {
@@ -221,6 +232,6 @@ $("#show").click(function(){
   $("p").show();
 });
 *//// GUIDE ONLY
-
+checkuser();
  saveSettings();
 $("backbtn").hide();

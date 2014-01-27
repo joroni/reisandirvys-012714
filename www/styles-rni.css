@@ -11,3 +11,12 @@ div#loading.jqm-demos div.ui-panel-content-wrap {
 div.ui-footer a.ui-btn span.ui-btn-inner {
 	width:auto !important;
 }
+
+
+.ui-btn-text {
+    -moz-user-select: none;
+    left: -17px !important;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
