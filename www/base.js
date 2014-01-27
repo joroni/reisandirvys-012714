@@ -221,5 +221,5 @@ $("#show").click(function(){
 });
 *//// GUIDE ONLY
 
- saveSettings();;
+ saveSettings();
 $("backbtn").hide();
