@@ -118,6 +118,7 @@ function saveLogin() {
 		if (password) {
 			localStorage.phonegapPass = password;
 			$("#logmsg").html("Settings for " + username + " trying to contact server ...");
+			$("#loggedin").html("Hi " + username + "!");
 			purl = baseurl + '/phonegap/login';
 			$.ajax({
 				type : 'POST',
