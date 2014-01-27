@@ -78,8 +78,8 @@ function loginout() {
 }
 
 function listArticles() {
-	//url = baseurl + '/phonegap/display_view';
-	url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
+	url = baseurl + '/phonegap/display_view';
+	//url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
 	$username = '';
 	$("#latestlist").html("Retrieving Data...");
 	$.post(url, {
@@ -143,8 +143,8 @@ function sendStory() {
 	localStorage.phonegapStory = story;
 	uname = localStorage.phonegapName;
 	hash = localStorage.hash;
-	//url = baseurl + '/phonegap/post';
-	url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
+	url = baseurl + '/phonegap/post';
+	//url = baseurl + '/drupalgap/views_datasource/drupalgap_content';
 	$("#sentmessage").html('<img id="sending" title="sending" alt="sending" src="images/loadingt.gif" /><br /> Your Message is being sent. If this message does not change after two minutes, please check your network connectivity.')
 	$.post(url, {
 		username : uname,
