@@ -45,6 +45,9 @@
 			margin-top: 1.4em;
 			border-top: 1px solid rgba(0,0,0,.1);
 		}
+		#footer {
+			display:none;
+		}
 </style>
 </head>
 <body onload="onBodyLoad()">
@@ -179,7 +182,7 @@
 			</div>-->
 		</form>
 
-    <a href="#" id="backbtn" data-id="backbtn" data-icon="back" data-iconpos="left" data-inline="true" data-rel="back" data-role="button" data-mini="true">Back</a>
+<!--    <a href="#" id="backbtn" data-id="backbtn" data-icon="back" data-iconpos="left" data-inline="true" data-rel="back" data-role="button" data-mini="true">Back</a>-->
 		</div>
     <!-- /content -->
     </div>
@@ -192,7 +195,7 @@
     
     <!-- Start of articles page 3.1 -->
       <div data-role="page" id="stories">
-         <div data-role="header" data-id="bhead" data-theme="a">
+         <div data-role="header" data-id="bhead" data-theme="f">
             <h1>Articles</h1>
            <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
             </div>
@@ -259,7 +262,7 @@
                <input id="display" type="text" disabled="true">
                </input>
                <br/>
-               <a data-role="button" data-theme="a">Save settings</a>
+               <a data-role="button" data-theme="a" class="ui-disabled">Save settings</a>
                    <a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
                <!-- onclick="saveSettings() -->
                </div>
