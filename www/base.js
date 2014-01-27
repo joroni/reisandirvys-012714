@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#home";
+var nextpage = "#loading";
 var view = "frontpage";
 var display = "poll";
 
@@ -12,17 +12,10 @@ function onDeviceReady() {
 	blat = localStorage.phonegapLat;
 	blong = localStorage.phonegapLong;
 	baseurl = localStorage.baseUrl;
-	//baseurl = 'http://www.m.reisandirvys.com';
 	view = localStorage.view;
 	display = localStorage.display;
 	
-
-	$("#baseurl").val(baseurl);
-		$("#username").val(username);
-		$("#storytitle").val(title);
-			$("#view").val(view);
-			$("#display").val(display);
-	/*if (baseurl) {
+if (baseurl) {
 		$("#baseurl").val(baseurl);
 	}
 
@@ -44,22 +37,16 @@ function onDeviceReady() {
 	if (display) {
 		$("#display").val(display);
 	};
-*/
+
 	if (localStorage.localLogin == 3) {
 		$("#logoutli").show();
-		//$("#logout").show(); // CUSTOM
 		$("#loginli").hide();
-		//$("#logoutbtn").hide(); // CUSTOM
-		//$("#loginbtn").hide(); // CUSTOM
-		//$("#login").hide(); // CUSTOM
-		
 	} else {
 
 		$("#footout").hide();
-		
 	};
 
-	$.mobile.changePage("#login");
+	$.mobile.changePage("#loading");
 
 }
 
@@ -189,6 +176,8 @@ function logout() {
 }
 
 $("#logmsg").html("Settings for " + username + " trying to contact server ...");
+
+
 function how() {
 	$.mobile.changePage("#howitworks");
 	//$.username.html("#loggedin");
