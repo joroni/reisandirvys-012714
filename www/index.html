@@ -64,8 +64,8 @@
 <!-- /page 1 -->
 <div data-role="page" class="jqm-demos ui-responsive-panel" id="loading">
 	<div data-role="header" data-theme="f" data-position="fixed">
-		<h1>Fixed header</h1>
-		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+		<h1>Home</h1>
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext" class="ui-icon ui-icon-bars ui-icon-shadow">Menu</a>
 		<a href="#login" data-icon="gear" data-iconpos="notext">Add</a>
 	</div>
 	<!-- /header -->
@@ -97,19 +97,13 @@
     
     <!-- panel left -->
 	<div data-role="panel" data-position-fixed="true" data-theme="a" id="nav-panel">
-		<ul data-role="listview" data-theme="a" class="nav-search">
-			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-			<li><a href="#home">Start</a></li>
-			<li><a href="#login" id="loginli">My Account</a></li>
-                    <ul data-role="listview" data-theme="a" class="nav-search">
-                    <li><a href="#logout" id="logoutli" onMouseDown="logout();">Logout</a></li>
-                    </ul>
-			<li><a href="#info">Info</a></li>
-            <li><a href="#settings">Settings</a></li>
-			<!--<li><a href="#panel-fixed-page2">Checkboxes</a></li>
-			<li><a href="#panel-fixed-page2">Collapsibles</a></li>
-			<li><a href="#panel-fixed-page2">Controlgroup</a></li>-->
-		</ul>
+              <ul data-role="listview" data-theme="a" class="nav-search">
+           <li data-icon="arrow-l"><a href="#" data-rel="close">Close menu</a></li>
+            <li data-icon="arrow-u"><a href="#home">Start Here</a></li>
+           <li data-icon="info"><a href="#info">Info</a></li>
+             <li data-icon="minus"><a href="#" id="logoutli" onMouseDown="loginout();">Logout</a></li>
+            <!-- <li><a href="#settings">Settings</a></li>-->
+        </ul>
 	</div>
 	<!-- /panel left -->
     
@@ -150,13 +144,13 @@
 		 <p>We would like to hear from you.</p>
                <ul data-role="listview" data-inset="true" data-theme="d">
                   <li>
-                     <a onclick="how()">Getting started</a>
+                     <a onClick="how();">JOIN US!</a>
                   </li>
                   <li>
-                     <a onclick="addStory()" href="#addstory">Upload an article</a>
+                     <a onClick="addStory();">MESSAGE US</a>
                   </li>
                   <li>
-                     <a onclick="listArticles()">View Posts</a>
+                     <a onClick="listArticles();">FLAVORS OF THE WEEK</a>
                   </li>
                </ul>
 		<a href="#loading" data-role="button" data-inline="true" data-mini="true" data-icon="home" data-iconpos="left">Home</a>
@@ -173,29 +167,33 @@
 	</div>
 	<!-- /header -->
     	<div data-role="content" class="jqm-content">
-		<form class="userform">
-			<h2>My Account</h2>
-			<label for="username">Username:</label>
-			<input type="text" name="username" id="username" value="" data-clear-btn="true" data-mini="true">
-			<label for="password">Password:</label>
-			<input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
-			<!--<div class="ui-grid-a">
-				<div class="ui-block-a">
-					<a href="#" data-rel="close" data-role="button" data-theme="c" data-mini="true">Cancel</a>
-				</div>-->
-				<p>
-					<a href="#" id="loginli" data-rel="close" data-role="button" data-theme="c" onclick="saveLogin()" data-mini="true">Login</a>
-				</p>
-                
-                <p>
-					<a href="http://m.reisandirvys.com/user/register" target="_blank" data-rel="close" data-role="button" data-theme="c" data-mini="true">Create New Account</a>
-                   
-				</p>
+		  <div class="ui-body ui-body-c">
+		    <p>
+            Usename 
+              <input id="username" type="text">
+            </input>
+          </p>
+          <p>
+            Password 
+              <input id="password" type="password">
+            </input>
+          </p>
+          <div id="logmsg">
+          </div>
+          <p>
+            <a data-role="button" onclick="saveLogin();" data-theme="a">Login</a>
+          </p>
+          
+           <p>
+            <a href="http://m.reisandirvys.com/user/register" target="_blank" data-rel="close" data-theme="e">Create New Account</a>
+          </p>
+      
+					
 				<!--<div class="ui-block-b">
 					<a href="#" id="logoutli" data-rel="close" data-role="button" data-theme="c" onclick="logout()" data-mini="true">Logout</a>
 				</div>
 			</div>-->
-		</form>
+		
 
 <!--    <a href="#" id="backbtn" data-id="backbtn" data-icon="back" data-iconpos="left" data-inline="true" data-rel="back" data-role="button" data-mini="true">Back</a>-->
 		</div>
@@ -242,15 +240,18 @@
             <div id="result">
             </div>
             <br/>
-        <!--    <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="a">-->
-            <p>
-            <a href="#" data-ajax="false" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="left">Cancel</a>
+        <!--    <div id="addcontrol" data-role="controlgroup" data-type="horizontal" data-theme="a">--><p>
+    <a href="#" data-role="button" data-ajax="false" data-rel="back" data-inline="true">Send</a>
+    <a href="#"  onclick="sendStory();" data-role="button" data-inline="true">Cancel</a>
+</p>
+           <!-- <p>
+            <a href="#" data-ajax="false" data-rel="back" data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="left">C</a>
             </p>
             <p>
             <a href="#" data-ajax="false" onclick="sendStory()" data-role="button" data-mini="true" data-inline="true" data-icon="check" data-iconpos="left">Send</a>
-            	<!--<a data-role="button" data-theme="a" data-rel="back" data-inline="true">Cancel</a>
-              	<a data-role="button" data-theme="a" onclick="sendStory()"  data-inline="true">Send </a>-->
-            </p>
+            	<a data-role="button" data-theme="a" data-rel="back" data-inline="true">Cancel</a>
+              	<a data-role="button" data-theme="a" onclick="sendStory()"  data-inline="true">Send </a>
+            </p>-->
   </div>
          <!-- /content -->
     </div>
