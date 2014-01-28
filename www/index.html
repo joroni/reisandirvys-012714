@@ -116,24 +116,24 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
        body {
         background: #fff;
         color: #444;
-       font: 16px/1.5 "Open Sans", Helvetica, Arial, sans-serif;
+       font: 16px/1.5 "Open Sans", Helvetica, Arial, sans-serif !important;
       }
 
       a, 
       a:visited {
         color: #888;
-        text-decoration: underline;
+       /* text-decoration: underline;*/
       }
       a:hover, 
       a:focus { color: #000; }
 
       h1 {
-        border-bottom: 2px solid #ddd;
+        border-bottom: 0px solid #ddd;
         color: #888;
         font-size: 36px;
         font-weight: 300;
         margin-bottom: 20px;
-        padding: 20px 0;
+        padding: 20px;
       }
 
       .container {
@@ -144,7 +144,7 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
       }
 
       .glyph {
-        border-bottom: 1px dotted #ccc;
+        border-bottom: 1px solid #ccc;
       /*  padding: 10px 0 20px;
         margin-bottom: 20px;*/
       }
@@ -244,10 +244,10 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
 	<div data-role="footer" data-position="fixed" data-theme="f">
   <!--  <a data-inline="true" data-iconpos="bottom" data-icon="arrow-d" data-role="button" href="#" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-bottom ui-btn-up-c"><span class="ui-btn-inner"><span class="ui-btn-text">Bottom</span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span></span>-->
     
-  		<a href="#"><i class="step menu fi-share size-48" ></i></a>
-   		<a href="#"><i class="step menu fi-comment-quotes size-48" ></i></a>
-    	<a href="#"><i class="step menu fi-archive size-48" ></i></a>
-     	<a href="#"><i class="step menu fi-burst-new size-48" ></i></a>
+  		<a href="#shout"><i class="step menu fi-share size-48" ></i></a>
+   		 <a onclick="addStory()" href="#addstory"><i class="step menu fi-comment-quotes size-48" ></i></a>
+    	<a onclick="how()"<i class="step menu fi-archive size-48" ></i></a>
+     	 <a onclick="listArticles()"><i class="step menu fi-burst-new size-48" ></i></a>
   		
 		<!--<a href="http:www.reisandirvys.com" target="_blank">www.reisandirvys.com</a>
 		<a href="#settings" data-icon="gear" class="ui-btn-right">Settings</a>
@@ -260,7 +260,7 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
 		<ul data-role="listview" data-theme="a" class="nav-search">
         
 			<li data-icon="arrow-l"><div id="loggedin"></div></li>
-			<li data-icon="arrow-u"><a href="#home">Start Here</a></li>
+			<!--<li data-icon="arrow-u"><a href="#home">Start Here</a></li>-->
 			<li data-icon="info"><a href="#info">Info</a></li>
 			<li data-icon="minus"><a href="#" id="logoutli" onmousedown="loginout();">Logout</a></li>
 			<!-- <li><a href="#settings">Settings</a></li>-->
@@ -334,7 +334,7 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
                     
           <div id="logmsg"></div>
           
-			<p><a data-role="button" onclick="saveLogin();" data-theme="a">Login</a></p>
+			<p><a data-role="button" onclick="saveLogin();" data-theme="d">Login</a></p>
 			<p><a href="http://m.reisandirvys.com/user/register" target="_blank" data-rel="close" data-theme="e">Create New Account</a></p>
            
 			<!--<div class="ui-block-b">
@@ -492,5 +492,25 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
 	<!-- /content -->
 </div>
 <!-- /page 7 -->
+
+
+<!-- /page 9 Info-->
+	<div data-role="page" id="shout">
+		<div data-role="header" data-theme="f">
+			<h1>Shout Out!</h1>
+		</div>
+		<!-- /header -->
+		<div data-role="content" class="jqm-content">
+			<p>
+				<center><img src="logo.png" width="200"></center>
+			</p>
+			 For more information go to <a href='http://www.reisandirvys.com'>www.reisandirvys.com</a>
+			<br/>
+		</p>
+		<a href="#" data-role="button" data-rel="back" data-inline="true" data-mini="true" data-icon="back" data-iconpos="left">Back</a>
+	</div>
+	<!-- /content -->
+</div>
+<!-- /page 9 -->
 </body>
 </html>

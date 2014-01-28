@@ -13,13 +13,7 @@ div.ui-footer a.ui-btn span.ui-btn-inner {
 }
 
 
-.ui-btn-text {
-    -moz-user-select: none;
-    left: -25px !important;
-    position: relative;
-    width: 100%;
-    z-index: 1;
-}
+
 
 
 
