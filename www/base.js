@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#login";
+var nextpage = "#home";
 var view = "frontpage";
 var display = "poll";
 
@@ -47,7 +47,7 @@ if (baseurl) {
 		//$.mobile.changePage("#login");// CUSTOM
 	};
 
-	$.mobile.changePage("#loading");
+	$.mobile.changePage("#home");
 
 }
 
@@ -114,11 +114,11 @@ function saveLogin() {
 	password = $("#password").val();
 	var sayhi = function(data) {
 		$("#logmsg").html("server result <br />" + data.result + " status: " + data.status);
-		localStorage.localLogin = 5;
+			localStorage.localLogin = 5;
 		if (data.status == "ok") {
 			localStorage.localLogin = 3;
 			localStorage.hash = data.hash;
-			$.mobile.changePage("#loading");
+			$.mobile.changePage(nextpage);
 		};
 	};
 	var saybi = function(data) {
@@ -202,14 +202,13 @@ function clearData() {
 	$("#username").val("");
 	$("#password").val("");
 	$("#logoutlia").val("Login");
-	clearStoryData();	
-	$.mobile.changePage("#login");
+	clearStoryData();
 }
 
 function addStory() {
 	if (localStorage.localLogin != 3) {
 		nextpage = "#addstory";
-		$.mobile.changePage("#home");
+		$.mobile.changePage("#login");
 	} else {
 		$.mobile.changePage("#addstory");
 	};
@@ -232,6 +231,6 @@ $("#show").click(function(){
   $("p").show();
 });
 *//// GUIDE ONLY
-checkuser();
+//checkuser();
  saveSettings();
 $("backbtn").hide();
