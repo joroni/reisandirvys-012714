@@ -1,5 +1,5 @@
 var baseurl = "http://www.m.reisandirvys.com";
-var nextpage = "#loading";
+var nextpage = "#login";
 var view = "frontpage";
 var display = "poll";
 
