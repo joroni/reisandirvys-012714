@@ -44,7 +44,7 @@ if (baseurl) {
 	} else {
 
 		$("#footout").hide();
-		$.mobile.changePage("#login");// CUSTOM
+		//$.mobile.changePage("#login");// CUSTOM
 	};
 
 	$.mobile.changePage("#loading");
